@@ -3,7 +3,13 @@ use std::io::BufReader;
 use std::io::prelude::*;
 use structopt::StructOpt;
 
-/// Derived from: https://rust-cli.github.io/book/tutorial/cli-args.html
+/// text_to_pdf is just a toy for learning Rust. At the moment, it's a glorified cat
+/// that just takes a directory's contents and dumps them into one file.
+/// TODO:
+/// * Support other file types
+/// * Bail out early if there are no files in the directory matching the extension filter
+/// * Actually convert to a PDF
+// Derived from: https://rust-cli.github.io/book/tutorial/cli-args.html
 #[derive(StructOpt)]
 struct Cli {
     /// The name of output file
